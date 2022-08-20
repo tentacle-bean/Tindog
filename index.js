@@ -1,5 +1,5 @@
-import dogs from "./data.js"
-import Dog from "./Dog.js"
+import dogs from "/data.js"
+import Dog from "/Dog.js"
 
 let isWaiting = false
 let dog = getNewProfile()
