@@ -1,0 +1,148 @@
+html,
+body,
+img {
+  height: 100%; 
+}
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F6F7FB;
+    background-image: linear-gradient(white, #F6F7FB);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+/***********
+TYPOGRAPHY
+************/
+
+.profile-data, .profile-message{
+    margin: 0;
+}
+
+.profile-data{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 0.4em;
+    letter-spacing: 1px;
+}
+
+.profile-message{
+    color: #B7B7B7
+}
+
+
+
+/******
+LAYOUT
+*******/
+
+.flex{
+    display: flex;
+}
+
+.container{
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+    flex-direction: column;
+}
+
+.flex-header, .flex-btns{
+    align-items: center;
+}
+
+.flex-header{
+    justify-content: space-between;
+    padding: 1em 5px;
+}
+
+.profile{
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: flex-end; 
+    flex-grow: 1;
+    padding: 0.8em;
+    min-height: 250px;
+}
+
+.profile-badge{
+    height: initial;
+    width: 40%;
+    margin-top: 7.5%;
+    transform: rotate(-30deg);
+    order: -1;
+    display: none;
+    margin-bottom: auto;
+}
+
+.profile-badge-active{
+    display: block;
+    background-color: rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+    animation-name: badge-appearance;
+    animation-duration: 0.25s;
+}
+
+@keyframes badge-appearance{
+    from{
+        transform: rotate(-30deg) scale(150%);
+        opacity: 0;
+    }
+    
+    to{
+        transform: rotate(-30deg) scale(100%)
+    }
+}
+
+.flex-btns{
+    justify-content: center;
+    padding: 1.25em;
+}
+
+.btn{
+    background: none;
+    border: none;
+}
+
+.btn-header{
+    height: 2em;
+}
+
+.btn-bottom{
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 10px 20px #E9E9EA;
+    margin: 0 0.75em;
+    justify-content: center;
+    align-items: center;
+    width: 3.75em;
+    height: 3.75em;
+    padding: 1.1em;
+}
+
+.btn:hover,
+.btn:focus{
+    cursor: pointer;
+}
+
+.btn-bottom-like:hover,
+.btn-bottom-like:focus{
+    background-color: #DBFFF4;
+    box-shadow: 0px 10px 20px #CCF1E6;
+}
+
+.btn-bottom-dislike:hover,
+.btn-bottom-dislike:focus{
+    background: #FFE7EF;
+    box-shadow: 0px 10px 20px #EDD9DF;
+}
