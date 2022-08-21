@@ -28,9 +28,12 @@ class Dog{
         this.hasBeenSwiped = true;
         this.hasBeenLiked = false;
         
-        dogs.find((match) => {
+        const record = dogs.find((match) => {
             return match.name === this.name
-        }).hasBeenSwiped = true
+        })
+        
+        record.hasBeenSwiped = true
+        record.hasBeenLiked = false
     }
     
     like(){
